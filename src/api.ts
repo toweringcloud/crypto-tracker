@@ -26,8 +26,6 @@ export function fetchCoinHistory(coinId: string) {
 		.then((response) => response.json())
 		.catch((ex) => {
 			console.log(ex);
-			// `${BASE_URL}/coins/${coinId}/ohlcv/historical?start=${startDate}&end=${endDate}`
-			// GET https://api.coinpaprika.com/v1/coins/btc-bitcoin/ohlcv/historical?start=1697204769&end=1698414369 402 (Payment Required)
 			return null;
 		});
 }

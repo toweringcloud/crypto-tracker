@@ -1,5 +1,5 @@
 import ApexChart from "react-apexcharts";
-import { useQuery } from "react-query";
+import { useQuery } from "@tanstack/react-query";
 
 import { fetchCoinHistory } from "../api";
 
@@ -18,22 +18,37 @@ interface ChartProps {
 }
 
 function Chart({ coinId }: ChartProps) {
-	const { isLoading, data } = useQuery<IHistorical[]>(["ohlcv", coinId], () =>
-		fetchCoinHistory(coinId)
-	);
+	const { isLoading, data } = useQuery<IHistorical[]>({
+		queryKey: ["ohlcv", coinId],
+		queryFn: () => fetchCoinHistory(coinId),
+	});
+	let interval = 0;
+
 	return (
 		<div>
-			{isLoading ? (
+			{isLoading || data === null ? (
 				"Loading chart..."
 			) : (
 				<ApexChart
-					type="line"
+					type="candlestick"
 					series={[
 						{
 							name: "Price",
 							data:
 								data && Array.isArray(data)
-									? data.map((price) => price.close)
+									? data.map((price) => {
+											let d = new Date();
+											d.setDate(d.getDate() - interval++);
+											return {
+												x: d,
+												y: [
+													price.open,
+													price.high,
+													price.low,
+													price.close,
+												],
+											};
+									  })
 									: [],
 						},
 					]}
@@ -42,6 +57,7 @@ function Chart({ coinId }: ChartProps) {
 							mode: "dark",
 						},
 						chart: {
+							type: "candlestick",
 							height: 300,
 							width: 500,
 							toolbar: {
