@@ -1,6 +1,6 @@
 # crypto-tracker
 
-coin price search using react query & apexchart
+## coin price search using react query & apexchart
 
 -   coin ranking
 -   coin summary
