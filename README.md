@@ -2,8 +2,8 @@
 
 coin price search using react query & apexchart
 
--   coin list
+-   coin ranking
 -   coin summary
 -   candlestick chart
 -   daily price grid
--   dark theme (comming soon...)
+-   dark/light theme (comming soon...)
