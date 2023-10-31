@@ -6,7 +6,7 @@
 -   coin summary
 -   candlestick chart
 -   daily price grid
--   dark/light theme (comming soon...)
+-   dark/light toggle
 
 [crypto ranking]
 ![Alt text](https://github.com/toweringcloud/crypto-tracker/blob/main/demo/snapshot1.png?raw=true)
