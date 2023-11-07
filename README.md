@@ -1,9 +1,8 @@
 # crypto-tracker
 
-## coin price search using react query & apexchart
+## crypto ranking search using react query & apexchart
 
--   coin ranking
--   coin summary
+-   crypto ranking
 -   candlestick chart
 -   daily price grid
 -   dark/light toggle
