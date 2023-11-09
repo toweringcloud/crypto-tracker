@@ -1,10 +1,10 @@
 {
 	"name": "crypto-tracker",
 	"version": "0.1.0",
-	"description": "coin price search using react query & apexchart",
+	"description": "crypto ranking search using react query & apexchart",
 	"license": "MIT",
 	"author": "toweringcloud",
-	"homepage": "https://github.com/toweringcloud/crypto-tracker",
+	"homepage": "https://toweringcloud.github.io/crypto-tracker",
 	"inspiredby": "https://nomadcoders.co/react-masterclass",
 	"keywords": [
 		"react",
