@@ -91,6 +91,7 @@ function Coins() {
 	return (
 		<Container>
 			<Helmet>
+				<meta charSet="utf-8" />
 				<title>Crypto Tracker</title>
 			</Helmet>
 			<Header>
