@@ -4,12 +4,10 @@ import Coins from "./routes/Coins";
 import Coin from "./routes/Coin";
 
 function Router() {
-	// const homepageTokens = process.env.PUBLIC_URL.split("/");
-	// const subProjectName = homepageTokens[homepageTokens.length - 1];
+	const projectName = import.meta.env.VITE_BASE_NAME;
 
 	return (
-		// <BrowserRouter basename={subProjectName}>
-		<BrowserRouter>
+		<BrowserRouter basename={projectName}>
 			<Switch>
 				<Route path="/:coinId">
 					<Coin />

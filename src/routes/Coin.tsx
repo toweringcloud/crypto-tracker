@@ -72,6 +72,7 @@ const OverviewItem = styled.div`
 	flex-direction: column;
 	align-items: center;
 	width: 33%;
+	color: white;
 	span:first-child {
 		font-size: 10px;
 		font-weight: 400;
@@ -96,8 +97,7 @@ const Tab = styled.span<{ isActive: boolean }>`
 	font-weight: 400;
 	background-color: rgba(0, 0, 0, 0.5);
 	border-radius: 10px;
-	color: ${(props) =>
-		props.isActive ? props.theme.accentColor : props.theme.textColor};
+	color: ${(props) => (props.isActive ? props.theme.accentColor : "white")};
 	a {
 		padding: 7px 0px;
 		display: block;

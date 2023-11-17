@@ -18,7 +18,7 @@ const PriceDate = styled.div`
 	flex-direction: column;
 	gap: 5px;
 	span:nth-child(1) {
-		color: gray;
+		color: white;
 	}
 `;
 const OpenClose = styled.div`
@@ -27,7 +27,7 @@ const OpenClose = styled.div`
 	flex-direction: column;
 	gap: 5px;
 	span:nth-child(1) {
-		color: gray;
+		color: white;
 	}
 `;
 const HighLow = styled.div`
@@ -36,7 +36,7 @@ const HighLow = styled.div`
 	flex-direction: column;
 	gap: 5px;
 	span:nth-child(1) {
-		color: gray;
+		color: white;
 	}
 `;
 
@@ -59,7 +59,7 @@ interface IHistorical {
 function convertDate(interval: number) {
 	let d = new Date();
 	d.setDate(d.getDate() - interval);
-	return `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+	return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
 }
 
 function Price({ coinId }: PriceProps) {
